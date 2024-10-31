@@ -91,7 +91,7 @@ export default {
 
         const fetchCourse = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/fetchCourse');
+                const response = await fetch('https://node-mongo-api-ywzx.onrender.com/api/fetchCourse');
                 if (!response.ok) throw new Error("Network response was not ok");
                 const data = await response.json();
                 course.value = data;
@@ -113,7 +113,7 @@ export default {
         const handleSubmit = async () => {
 
             try {
-                const response = await fetch(`http://localhost:8080/api/courses/${courseId.value}/students/${studentId.value}/rooms`, {
+                const response = await fetch(`https://node-mongo-api-ywzx.onrender.com/api/courses/${courseId.value}/students/${studentId.value}/rooms`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -139,7 +139,7 @@ export default {
         const handleDeleteRoom = async (courseId, studentId, roomId) => {
             try {
                 if (window.confirm('Are you sure delete?')) {
-                    const response = await fetch(`http://localhost:8080/api/courses/${courseId}/students/${studentId}/rooms/${roomId}`, {
+                    const response = await fetch(`https://node-mongo-api-ywzx.onrender.com/api/courses/${courseId}/students/${studentId}/rooms/${roomId}`, {
                         method: "DELETE"
                     })
                     if (!response.ok) {

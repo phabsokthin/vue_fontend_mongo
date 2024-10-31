@@ -36,7 +36,7 @@ export default{
 
         const fetchRoomId = async() => {
 
-            const response = await fetch(`http://localhost:8080/api/courses/${route.params.courseId}/students/${route.params.studentId}/rooms/${route.params.roomId}`)
+            const response = await fetch(`https://node-mongo-api-ywzx.onrender.com/api/courses/${route.params.courseId}/students/${route.params.studentId}/rooms/${route.params.roomId}`)
 
             if(!response.ok){
                 throw new Error('failed fetch room by id')
@@ -57,7 +57,7 @@ export default{
         const updateRoom = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8080/api/courses/${route.params.courseId}/students/${route.params.studentId}/rooms/${route.params.roomId}`,
+                    `https://node-mongo-api-ywzx.onrender.com/api/courses/${route.params.courseId}/students/${route.params.studentId}/rooms/${route.params.roomId}`,
                     {
                         method: 'PUT',
                         headers: {
