@@ -1,6 +1,7 @@
 <template>
     <div class="w-2/3 mx-auto">
       <div>
+        
         <form @submit.prevent="handleSubmit">
           <div class="space-y-2">
             <div class="space-y-2">
@@ -59,6 +60,8 @@
   
         </tbody>
       </table>
+
+      <RouterLink :to="{name: 'room'}">Create Room</RouterLink>
   
     </div>
   
